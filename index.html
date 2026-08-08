@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
@@ -22,16 +22,16 @@
     }
 
     :root {
-      --navy: #0A1628;
-      --navy-mid: #0D2137;
-      --navy-card: #112240;
-      --navy-light: #1A3A5C;
-      --amber: #F0A500;
-      --amber-dim: #C4840A;
-      --sky: #4DAFEF;
-      --white: #E8F4FD;
-      --muted: #8BA8C4;
-      --divider: rgba(77, 175, 239, 0.15);
+      --bg-color: #F5F2EE;
+      --surface: #EAE6DF;
+      --card-bg: #FFFFFF;
+      --surface-raised: #EFECE7;
+      --accent-orange: #F97316;
+      --accent-orange-dim: #D97706;
+      --accent-secondary: #EA580C;
+      --text-primary: #1C1917;
+      --text-muted: #57534E;
+      --divider: rgba(28, 25, 23, 0.1);
       --radius: 10px;
     }
 
@@ -41,8 +41,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--navy);
-      color: var(--white);
+      background: var(--bg-color);
+      color: var(--text-primary);
       line-height: 1.7;
       overflow-x: hidden;
     }
@@ -51,17 +51,17 @@
     h2,
     h3,
     h4 {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       line-height: 1.2;
     }
 
     a {
-      color: var(--sky);
+      color: var(--accent-secondary);
       text-decoration: none;
     }
 
     a:hover {
-      color: var(--amber);
+      color: var(--accent-orange);
     }
 
     img {
@@ -80,18 +80,18 @@
     }
 
     .section-alt {
-      background: var(--navy-mid);
+      background: var(--surface);
     }
 
     .tag {
       display: inline-block;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--amber);
-      border: 1px solid var(--amber);
+      color: var(--accent-orange);
+      border: 1px solid var(--accent-orange);
       padding: 4px 12px;
       border-radius: 100px;
       margin-bottom: 18px;
@@ -100,29 +100,29 @@
     .section-title {
       font-size: clamp(26px, 4vw, 40px);
       font-weight: 800;
-      color: var(--white);
+      color: var(--text-primary);
       margin-bottom: 14px;
     }
 
     .section-sub {
       font-size: 17px;
-      color: var(--muted);
+      color: var(--text-muted);
       max-width: 580px;
       margin-bottom: 50px;
     }
 
     .amber {
-      color: var(--amber);
+      color: var(--accent-orange);
     }
 
     .sky {
-      color: var(--sky);
+      color: var(--accent-secondary);
     }
 
     /* ── Buttons ── */
     .btn {
       display: inline-block;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
       font-size: 15px;
       padding: 14px 30px;
@@ -134,26 +134,26 @@
     }
 
     .btn-primary {
-      background: var(--amber);
-      color: var(--navy);
+      background: var(--accent-orange);
+      color: #FFFFFF;
     }
 
     .btn-primary:hover {
-      background: #FFB822;
-      color: var(--navy);
+      background: var(--accent-secondary);
+      color: #FFFFFF;
       transform: translateY(-1px);
       box-shadow: 0 8px 24px rgba(240, 165, 0, 0.35);
     }
 
     .btn-outline {
       background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: var(--text-primary);
+      border: 2px solid var(--divider);
     }
 
     .btn-outline:hover {
-      border-color: var(--sky);
-      color: var(--sky);
+      border-color: var(--accent-secondary);
+      color: var(--accent-secondary);
       transform: translateY(-1px);
     }
 
@@ -164,7 +164,8 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(10, 22, 40, 0.92);
+      background: rgba(245, 242, 238, 0.95);
+      /* Light background for navbar */
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--divider);
       padding: 16px 0;
@@ -185,14 +186,14 @@
     }
 
     .nav-logo {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 800;
       font-size: 18px;
-      color: var(--white);
+      color: var(--text-primary);
     }
 
     .nav-logo span {
-      color: var(--amber);
+      color: var(--accent-orange);
     }
 
     .nav-links {
@@ -204,17 +205,17 @@
     .nav-links a {
       font-size: 14px;
       font-weight: 500;
-      color: var(--muted);
+      color: var(--text-muted);
       transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: var(--white);
+      color: var(--text-primary);
     }
 
     .nav-cta {
       font-size: 14px !important;
-      color: var(--amber) !important;
+      color: var(--accent-orange) !important;
       font-weight: 700 !important;
     }
 
@@ -222,7 +223,7 @@
       display: none;
       background: none;
       border: none;
-      color: var(--white);
+      color: var(--text-primary);
       font-size: 22px;
       cursor: pointer;
     }
@@ -231,7 +232,7 @@
       display: none;
       flex-direction: column;
       gap: 0;
-      background: var(--navy-card);
+      background: var(--card-bg);
       border-top: 1px solid var(--divider);
       padding: 0;
       max-height: 0;
@@ -247,7 +248,7 @@
     .mobile-nav a {
       padding: 12px 24px;
       font-size: 15px;
-      color: var(--muted);
+      color: var(--text-muted);
       font-weight: 500;
       border-bottom: 1px solid var(--divider);
       display: block;
@@ -288,8 +289,17 @@
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 40px;
       align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      max-width: 100%;
+      margin-top: -180px;
     }
 
     .hero-eyebrow {
@@ -302,7 +312,7 @@
     .hero-eyebrow .dot {
       width: 8px;
       height: 8px;
-      background: var(--amber);
+      background: var(--accent-orange);
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
@@ -324,7 +334,7 @@
     .hero-eyebrow span {
       font-size: 13px;
       font-weight: 600;
-      color: var(--amber);
+      color: var(--accent-orange);
       letter-spacing: 1px;
       text-transform: uppercase;
     }
@@ -337,7 +347,7 @@
     }
 
     .hero h1 .line-highlight {
-      background: linear-gradient(135deg, var(--sky), var(--amber));
+      background: linear-gradient(135deg, var(--accent-secondary), var(--accent-orange));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -345,7 +355,7 @@
 
     .hero-sub {
       font-size: 17px;
-      color: var(--muted);
+      color: var(--text-muted);
       line-height: 1.75;
       margin-bottom: 36px;
       max-width: 480px;
@@ -355,6 +365,7 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
+      justify-content: flex-start;
       margin-bottom: 48px;
     }
 
@@ -362,6 +373,7 @@
       display: flex;
       gap: 28px;
       flex-wrap: wrap;
+      justify-content: flex-start;
     }
 
     .trust-item {
@@ -369,17 +381,17 @@
       align-items: center;
       gap: 8px;
       font-size: 13px;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .trust-item i {
-      color: var(--amber);
+      color: var(--accent-orange);
       font-size: 14px;
     }
 
     /* ── Search Simulation ── */
     .search-sim {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border: 1px solid var(--divider);
       border-radius: 16px;
       padding: 32px;
@@ -389,14 +401,14 @@
     .search-sim-label {
       font-size: 12px;
       font-weight: 600;
-      color: var(--muted);
+      color: var(--text-muted);
       letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
 
     .fake-search-bar {
-      background: var(--navy-light);
+      background: var(--surface-raised);
       border: 1px solid rgba(77, 175, 239, 0.3);
       border-radius: 8px;
       padding: 14px 18px;
@@ -407,15 +419,15 @@
     }
 
     .fake-search-bar i {
-      color: var(--muted);
+      color: var(--text-muted);
       font-size: 15px;
     }
 
     .search-text {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 16px;
       font-weight: 600;
-      color: var(--white);
+      color: var(--text-primary);
       min-width: 180px;
     }
 
@@ -423,7 +435,7 @@
       display: inline-block;
       width: 2px;
       height: 18px;
-      background: var(--amber);
+      background: var(--accent-orange);
       animation: blink 0.8s steps(1) infinite;
       vertical-align: middle;
       margin-left: 2px;
@@ -442,7 +454,7 @@
     }
 
     .result-card {
-      background: var(--navy);
+      background: var(--bg-color);
       border: 1px solid var(--divider);
       border-radius: 8px;
       padding: 14px 16px;
@@ -451,7 +463,7 @@
     }
 
     .result-card.highlighted {
-      border-color: var(--amber);
+      border-color: var(--accent-orange);
       background: rgba(240, 165, 0, 0.06);
     }
 
@@ -461,28 +473,28 @@
 
     .result-domain {
       font-size: 11px;
-      color: var(--sky);
+      color: var(--accent-secondary);
       margin-bottom: 4px;
     }
 
     .result-title {
       font-size: 14px;
       font-weight: 600;
-      color: var(--white);
+      color: var(--text-primary);
       margin-bottom: 3px;
     }
 
     .result-snippet {
       font-size: 12px;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .result-badge {
       display: inline-block;
       font-size: 10px;
       font-weight: 700;
-      background: var(--amber);
-      color: var(--navy);
+      background: var(--accent-orange);
+      color: #FFFFFF;
       padding: 2px 8px;
       border-radius: 100px;
       margin-left: 8px;
@@ -491,7 +503,7 @@
 
     .sim-note {
       font-size: 12px;
-      color: var(--muted);
+      color: var(--text-muted);
       text-align: center;
       margin-top: 16px;
       font-style: italic;
@@ -499,7 +511,7 @@
 
     /* ── Trust Bar ── */
     .trust-bar {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border-top: 1px solid var(--divider);
       border-bottom: 1px solid var(--divider);
       padding: 28px 0;
@@ -518,16 +530,16 @@
     }
 
     .trust-stat .num {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 26px;
       font-weight: 900;
-      color: var(--amber);
+      color: var(--accent-orange);
       display: block;
     }
 
     .trust-stat .lbl {
       font-size: 12px;
-      color: var(--muted);
+      color: var(--text-muted);
       font-weight: 500;
       letter-spacing: 0.5px;
     }
@@ -558,9 +570,9 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: var(--navy-card);
+      background: var(--card-bg);
       border: 1px solid var(--divider);
-      border-left: 3px solid var(--sky);
+      border-left: 3px solid var(--accent-secondary);
       border-radius: 8px;
       padding: 12px 16px;
       font-size: 15px;
@@ -569,11 +581,47 @@
     }
 
     .search-list li:hover {
-      border-left-color: var(--amber);
+      border-left-color: var(--accent-orange);
+    }
+
+    
+    .search-lists-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+      height: 310px;
+      overflow: hidden;
+      position: relative;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    }
+
+    .marquee-track {
+      overflow: hidden;
+    }
+
+    .search-list.marquee {
+      margin-top: 0;
+      animation: vertical-marquee 15s linear infinite;
+    }
+
+    .search-list.marquee.reverse {
+      animation: vertical-marquee-rev 20s linear infinite;
+    }
+
+    @keyframes vertical-marquee {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    @keyframes vertical-marquee-rev {
+      0% { transform: translateY(-50%); }
+      100% { transform: translateY(0); }
     }
 
     .search-list li i {
-      color: var(--muted);
+      color: var(--text-muted);
       font-size: 13px;
     }
 
@@ -584,12 +632,12 @@
       padding: 28px;
       margin-top: 30px;
       font-size: 16px;
-      color: var(--white);
+      color: var(--text-primary);
       line-height: 1.75;
     }
 
     .why-callout strong {
-      color: var(--amber);
+      color: var(--accent-orange);
     }
 
     select {
@@ -597,9 +645,9 @@
       height: 56px;
       padding: 0 16px;
       border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(255, 255, 255, 0.06);
-      color: #fff;
+      border: 1px solid var(--divider);
+      background: var(--surface-raised);
+      color: var(--text-primary);
       font-size: 15px;
       font-family: inherit;
     }
@@ -610,8 +658,8 @@
     }
 
     select option {
-      background: #0b2247;
-      color: #fff;
+      background: var(--card-bg);
+      color: var(--text-primary);
     }
 
     /* ── What We Improve ── */
@@ -622,7 +670,7 @@
     }
 
     .improve-card {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border: 1px solid var(--divider);
       border-radius: var(--radius);
       padding: 28px;
@@ -630,7 +678,7 @@
     }
 
     .improve-card:hover {
-      border-color: var(--sky);
+      border-color: var(--accent-secondary);
       transform: translateY(-3px);
     }
 
@@ -644,25 +692,25 @@
       justify-content: center;
       margin-bottom: 18px;
       font-size: 20px;
-      color: var(--sky);
+      color: var(--accent-secondary);
     }
 
     .improve-card h3 {
       font-size: 17px;
       font-weight: 700;
       margin-bottom: 10px;
-      color: var(--white);
+      color: var(--text-primary);
     }
 
     .improve-card p {
       font-size: 14px;
-      color: var(--muted);
+      color: var(--text-muted);
       line-height: 1.7;
     }
 
     /* ── Pricing ── */
     #pricing {
-      background: var(--navy-mid);
+      background: var(--surface);
     }
 
     .pricing-grid {
@@ -673,12 +721,14 @@
     }
 
     .price-card {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border: 1px solid var(--divider);
       border-radius: 14px;
       padding: 32px 28px;
       transition: transform 0.2s, border-color 0.2s;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     .price-card:hover {
@@ -686,8 +736,10 @@
     }
 
     .price-card.featured {
-      border-color: var(--amber);
-      background: linear-gradient(160deg, #0E1E38, #112240);
+      border-color: var(--accent-orange);
+      border-width: 2px;
+      box-shadow: 0 12px 32px rgba(249, 115, 22, 0.15);
+      background: var(--card-bg);
     }
 
     .price-card.featured::before {
@@ -696,9 +748,9 @@
       top: -12px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--amber);
-      color: var(--navy);
-      font-family: 'Outfit', sans-serif;
+      background: var(--accent-orange);
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 10px;
       font-weight: 800;
       letter-spacing: 1.5px;
@@ -707,40 +759,40 @@
     }
 
     .price-tier {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--sky);
+      color: var(--accent-secondary);
       margin-bottom: 8px;
     }
 
     .price-name {
       font-size: 22px;
       font-weight: 800;
-      color: var(--white);
+      color: var(--text-primary);
       margin-bottom: 6px;
     }
 
     .price-amount {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 32px;
       font-weight: 900;
-      color: var(--amber);
+      color: var(--accent-orange);
       margin-bottom: 6px;
     }
 
     .price-amount span {
       font-size: 15px;
       font-weight: 500;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .price-best-for {
       font-size: 12px;
       font-weight: 700;
-      color: var(--muted);
+      color: var(--text-muted);
       letter-spacing: 1px;
       text-transform: uppercase;
       margin: 20px 0 10px;
@@ -753,7 +805,7 @@
 
     .price-targets li {
       font-size: 13px;
-      color: var(--muted);
+      color: var(--text-muted);
       padding: 4px 0;
       padding-left: 18px;
       position: relative;
@@ -763,7 +815,7 @@
       content: '›';
       position: absolute;
       left: 0;
-      color: var(--sky);
+      color: var(--accent-secondary);
     }
 
     .price-divider {
@@ -775,7 +827,7 @@
     .price-includes-label {
       font-size: 11px;
       font-weight: 700;
-      color: var(--muted);
+      color: var(--text-muted);
       letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 14px;
@@ -794,24 +846,24 @@
       align-items: flex-start;
       gap: 10px;
       font-size: 13.5px;
-      color: var(--muted);
+      color: var(--text-muted);
       line-height: 1.5;
     }
 
     .price-features li i {
-      color: var(--amber);
+      color: var(--accent-orange);
       font-size: 13px;
       margin-top: 2px;
       flex-shrink: 0;
     }
 
     .price-features li.inherit i {
-      color: var(--sky);
+      color: var(--accent-secondary);
     }
 
     .price-note {
       font-size: 12px;
-      color: var(--muted);
+      color: var(--text-muted);
       line-height: 1.65;
       border-top: 1px solid var(--divider);
       padding-top: 16px;
@@ -822,7 +874,7 @@
     /* ── Progress Metrics ── */
     .metrics-section {
       padding: 60px 0;
-      background: var(--navy);
+      background: var(--bg-color);
     }
 
     .metrics-title {
@@ -830,11 +882,11 @@
       font-weight: 700;
       text-align: center;
       margin-bottom: 30px;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .metrics-title strong {
-      color: var(--white);
+      color: var(--text-primary);
     }
 
     .metrics-grid {
@@ -845,7 +897,7 @@
     }
 
     .metric-chip {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border: 1px solid var(--divider);
       border-radius: 100px;
       padding: 10px 20px;
@@ -853,19 +905,19 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      color: var(--white);
+      color: var(--text-primary);
       font-weight: 500;
     }
 
     .metric-chip i {
-      color: var(--amber);
+      color: var(--accent-orange);
       font-size: 13px;
     }
 
     .metrics-note {
       text-align: center;
       font-size: 13px;
-      color: var(--muted);
+      color: var(--text-muted);
       margin-top: 24px;
       max-width: 600px;
       margin-left: auto;
@@ -885,36 +937,36 @@
     .about-avatar {
       width: 80px;
       height: 80px;
-      background: linear-gradient(135deg, var(--navy-light), var(--sky));
+      background: linear-gradient(135deg, var(--surface-raised), var(--accent-secondary));
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 28px;
       font-weight: 900;
-      color: var(--white);
+      color: var(--text-primary);
       margin-bottom: 20px;
-      border: 3px solid var(--amber);
+      border: 3px solid var(--accent-orange);
     }
 
     .about-name {
       font-size: 26px;
       font-weight: 800;
-      color: var(--white);
+      color: var(--text-primary);
       margin-bottom: 6px;
     }
 
     .about-role {
       font-size: 14px;
-      color: var(--sky);
+      color: var(--accent-secondary);
       font-weight: 600;
       margin-bottom: 18px;
     }
 
     .about-bio {
       font-size: 15px;
-      color: var(--muted);
+      color: var(--text-muted);
       line-height: 1.8;
       margin-bottom: 28px;
     }
@@ -926,22 +978,22 @@
     }
 
     .highlight-item {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border: 1px solid var(--divider);
-      border-left: 3px solid var(--amber);
+      border-left: 3px solid var(--accent-orange);
       border-radius: 8px;
       padding: 14px 16px;
     }
 
     .highlight-item i {
-      color: var(--amber);
+      color: var(--accent-orange);
       margin-right: 8px;
       font-size: 13px;
     }
 
     .highlight-item span {
       font-size: 13px;
-      color: var(--white);
+      color: var(--text-primary);
       font-weight: 500;
     }
 
@@ -962,8 +1014,8 @@
       width: 100%;
       background: none;
       border: none;
-      color: var(--white);
-      font-family: 'Outfit', sans-serif;
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 17px;
       font-weight: 600;
       text-align: left;
@@ -977,19 +1029,19 @@
     }
 
     .faq-q:hover {
-      color: var(--amber);
+      color: var(--accent-orange);
     }
 
     .faq-q i {
       font-size: 14px;
-      color: var(--sky);
+      color: var(--accent-secondary);
       transition: transform 0.3s;
       flex-shrink: 0;
     }
 
     .faq-q.open i {
       transform: rotate(180deg);
-      color: var(--amber);
+      color: var(--accent-orange);
     }
 
     .faq-a {
@@ -1004,14 +1056,14 @@
 
     .faq-a-inner {
       font-size: 15px;
-      color: var(--muted);
+      color: var(--text-muted);
       line-height: 1.75;
       padding-bottom: 20px;
     }
 
     /* ── Contact ── */
     #contact {
-      background: var(--navy-mid);
+      background: var(--surface);
     }
 
     .contact-grid {
@@ -1029,7 +1081,7 @@
 
     .contact-info p {
       font-size: 15px;
-      color: var(--muted);
+      color: var(--text-muted);
       line-height: 1.8;
       margin-bottom: 30px;
     }
@@ -1040,17 +1092,17 @@
       gap: 12px;
       margin-bottom: 14px;
       font-size: 14px;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .contact-detail i {
-      color: var(--amber);
+      color: var(--accent-orange);
       width: 16px;
       text-align: center;
     }
 
     .contact-form {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border: 1px solid var(--divider);
       border-radius: 14px;
       padding: 36px;
@@ -1070,7 +1122,7 @@
       display: block;
       font-size: 12px;
       font-weight: 600;
-      color: var(--muted);
+      color: var(--text-muted);
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-bottom: 8px;
@@ -1079,20 +1131,20 @@
     .form-group input,
     .form-group textarea {
       width: 100%;
-      background: var(--navy-light);
+      background: var(--surface-raised);
       border: 1px solid var(--divider);
       border-radius: 8px;
       padding: 13px 16px;
       font-family: 'Inter', sans-serif;
       font-size: 14px;
-      color: var(--white);
+      color: var(--text-primary);
       outline: none;
       transition: border-color 0.2s;
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
-      border-color: var(--sky);
+      border-color: var(--accent-secondary);
     }
 
     .form-group input::placeholder,
@@ -1115,8 +1167,8 @@
     .btn-spinner {
       width: 16px;
       height: 16px;
-      border: 2px solid rgba(255, 255, 255, 0.35);
-      border-top-color: #ffffff;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      border-top-color: var(--accent-orange);
       border-radius: 50%;
       display: none;
       animation: spin 0.8s linear infinite;
@@ -1145,7 +1197,7 @@
       display: none;
       text-align: center;
       padding: 24px;
-      color: var(--white);
+      color: var(--text-primary);
     }
 
     .form-success i {
@@ -1157,7 +1209,7 @@
 
     /* ── Footer ── */
     footer {
-      background: var(--navy-card);
+      background: var(--card-bg);
       border-top: 1px solid var(--divider);
       padding: 50px 0 30px;
     }
@@ -1172,20 +1224,20 @@
     }
 
     .footer-brand .logo {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 20px;
       font-weight: 800;
-      color: var(--white);
+      color: var(--text-primary);
       margin-bottom: 6px;
     }
 
     .footer-brand .logo span {
-      color: var(--amber);
+      color: var(--accent-orange);
     }
 
     .footer-brand p {
       font-size: 13px;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .footer-links-col h4 {
@@ -1193,20 +1245,20 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--text-muted);
       margin-bottom: 14px;
     }
 
     .footer-links-col a {
       display: block;
       font-size: 14px;
-      color: var(--muted);
+      color: var(--text-muted);
       margin-bottom: 8px;
       transition: color 0.2s;
     }
 
     .footer-links-col a:hover {
-      color: var(--white);
+      color: var(--text-primary);
     }
 
     .footer-social {
@@ -1218,21 +1270,21 @@
     .social-btn {
       width: 36px;
       height: 36px;
-      background: var(--navy-light);
+      background: var(--surface-raised);
       border: 1px solid var(--divider);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--muted);
+      color: var(--text-muted);
       font-size: 15px;
       transition: all 0.2s;
     }
 
     .social-btn:hover {
-      background: var(--amber);
-      color: var(--navy);
-      border-color: var(--amber);
+      background: var(--accent-orange);
+      color: #FFFFFF;
+      border-color: var(--accent-orange);
     }
 
     .footer-bottom {
@@ -1240,7 +1292,7 @@
       padding-top: 24px;
       text-align: center;
       font-size: 13px;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     /* ── Scroll Animations ── */
@@ -1269,6 +1321,19 @@
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
+      .faq-a-inner > div {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      .search-lists-wrapper {
+        grid-template-columns: 1fr;
+        height: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+      .search-list.marquee {
+        animation: none;
+      }
 
       .hero-grid,
       .why-grid,
@@ -1336,6 +1401,500 @@
         text-align: center;
       }
     }
+
+    /* ── Interactive SERP Demo (White Realistic Version) ── */
+    .serp-demo-container {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+
+    .serp-header-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding: 0 16px;
+      opacity: 0.8;
+    }
+
+    .serp-state-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: color 0.4s ease, opacity 0.4s ease;
+    }
+
+    .serp-state-label.inactive {
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    .white-serp {
+      background: #ffffff;
+      border: 1px solid #dfe1e5;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(32, 33, 36, 0.05);
+      color: #202124;
+      text-align: left;
+    }
+
+    .serp-search-wrapper {
+      padding: 24px 24px 16px 24px;
+    }
+
+    .serp-pill-search {
+      background: #ffffff;
+      border: 1px solid #dfe1e5;
+      border-radius: 24px;
+      padding: 0 16px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.1);
+      transition: box-shadow 0.2s;
+    }
+
+    .serp-pill-search:hover {
+      box-shadow: 0 1px 8px rgba(32, 33, 36, 0.2);
+    }
+
+    .serp-search-icon {
+      display: flex;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+    }
+
+    .serp-query-container {
+      flex-grow: 1;
+      font-size: 16px;
+      color: #202124;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .cursor-blink {
+      font-weight: 300;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .serp-mic-icon {
+      display: flex;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    .serp-tabs-google {
+      display: flex;
+      gap: 20px;
+      padding: 0 24px;
+      border-bottom: 1px solid #ebebeb;
+      margin-bottom: 16px;
+    }
+
+    .serp-tab-g {
+      font-size: 14px;
+      color: #5f6368;
+      padding: 10px 0;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .serp-tab-g.active {
+      color: #1a73e8;
+    }
+
+    .serp-tab-g.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #1a73e8;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .serp-results-area {
+      padding: 12px 24px 32px 24px;
+      position: relative;
+      height: 620px;
+    }
+
+    /* AI Overview */
+    .serp-ai-overview {
+      background: linear-gradient(135deg, rgba(232, 240, 254, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+      border: 1px solid #e8eaed;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .ai-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .ai-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .ai-header span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #202124;
+      flex-grow: 1;
+    }
+
+    .ai-chevron {
+      color: #5f6368;
+      transition: transform 0.3s ease;
+    }
+
+    .ai-content {
+      font-size: 14px;
+      color: #4d5156;
+      line-height: 1.58;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+    }
+
+    .serp-ai-overview.expanded .ai-content {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 12px;
+    }
+
+    .serp-ai-overview.expanded .ai-chevron {
+      transform: rotate(180deg);
+    }
+
+    .ai-content ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    /* Organic Results */
+    .serp-state {
+      display: none;
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .serp-state.active {
+      display: block;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .serp-g-result {
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .serp-g-url {
+      font-size: 14px;
+      color: #202124;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .url-path {
+      color: #5f6368;
+    }
+
+    .serp-g-url i {
+      font-size: 10px;
+      color: #70757a;
+    }
+
+    .serp-g-title {
+      font-size: 20px;
+      font-weight: 400;
+      color: #1a0dab;
+      margin-bottom: 4px;
+      line-height: 1.3;
+      cursor: pointer;
+    }
+
+    .serp-g-title:hover {
+      text-decoration: underline;
+    }
+
+    .serp-g-snippet {
+      font-size: 14px;
+      color: #4d5156;
+      line-height: 1.58;
+      max-width: 650px;
+    }
+
+    .serp-g-snippet b {
+      color: #202124;
+      font-weight: bold;
+    }
+
+    /* Highlights & Badges */
+    .serp-badge-top {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 11px;
+      background: #fdf5e6;
+      color: #b77900;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .client-highlight {
+      position: relative;
+    }
+
+    .client-highlight::before {
+      content: '';
+      position: absolute;
+      left: -16px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--accent-orange);
+      border-radius: 4px;
+      opacity: 0;
+      transform: scaleY(0.5);
+      animation: highlightReveal 0.6s forwards 0.8s;
+    }
+
+    /* Maps Pack */
+    .serp-g-maps-pack {
+      border: 1px solid #dfe1e5;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .g-maps-header {
+      padding: 16px;
+      font-size: 20px;
+      color: #202124;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    .g-maps-header i {
+      color: #5f6368;
+      font-size: 16px;
+    }
+
+    .g-maps-map-image {
+      height: 100px;
+      background: #e5e3df;
+      border-bottom: 1px solid #ebebeb;
+      background-image: linear-gradient(#d5d3cf 1px, transparent 1px), linear-gradient(90deg, #d5d3cf 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .g-maps-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px;
+      border-bottom: 1px solid #ebebeb;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .g-maps-item:hover {
+      background: #f8f9fa;
+    }
+
+    .g-maps-item:last-child {
+      border-bottom: none;
+    }
+
+    .client-map-highlight::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--accent-orange);
+      opacity: 0;
+      animation: highlightReveal 0.6s forwards 1.2s;
+    }
+
+    .g-maps-title {
+      font-size: 16px;
+      color: #1a0dab;
+      margin-bottom: 2px;
+    }
+
+    .g-maps-rating {
+      font-size: 14px;
+      color: #70757a;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .stars {
+      color: #fbbc04;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .g-maps-address {
+      font-size: 14px;
+      color: #70757a;
+    }
+
+    .g-maps-directions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      color: #1a73e8;
+      font-size: 12px;
+      padding-left: 16px;
+      border-left: 1px solid #ebebeb;
+    }
+
+    .g-maps-directions i {
+      font-size: 20px;
+    }
+
+    /* Metric Popups */
+    .metric-popup {
+      position: absolute;
+      right: 0;
+      background: var(--bg-color);
+      color: var(--text-primary);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-left: 3px solid var(--accent-orange);
+      opacity: 0;
+      transform: translateX(20px);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 10;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .metric-popup i {
+      color: var(--accent-orange);
+    }
+
+    .metric-1 {
+      top: 0px;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 1.4s;
+    }
+
+    .metric-2 {
+      top: 10px;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 2.0s;
+    }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .faq-a-inner > div {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      .search-lists-wrapper {
+        grid-template-columns: 1fr;
+        height: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+      .search-list.marquee {
+        animation: none;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .hero-btns,
+      .hero-trust {
+        justify-content: center;
+      }
+
+      .metric-popup {
+        right: 10px;
+      }
+
+      .serp-header-labels {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .serp-tabs-google {
+        gap: 12px;
+        overflow-x: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .serp-state,
+      .serp-ai-overview .ai-content {
+        transition: none;
+      }
+
+      .client-highlight::before,
+      .client-map-highlight::before {
+        animation: none;
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+      .metric-popup {
+        animation: none;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   </style>
 </head>
 
@@ -1347,7 +1906,6 @@
       <div class="nav-logo">DT<span>.</span></div>
       <div class="nav-links">
         <a href="#why">Why Visibility</a>
-        <a href="#services">Services</a>
         <a href="#pricing">Packages</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
@@ -1357,7 +1915,6 @@
     </div>
     <div class="mobile-nav" id="mobileNav">
       <a href="#why">Why Visibility</a>
-      <a href="#services">Services</a>
       <a href="#pricing">Packages</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
@@ -1367,52 +1924,194 @@
 
   <!-- ── Hero ── -->
   <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-eyebrow">
-            <div class="dot"></div>
-            <span>Education Visibility Services</span>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="dot"></div>
+          <span>Education Visibility Services</span>
+        </div>
+        <h1>Improve Your Institute's Visibility Across <span class="line-highlight">Google, Maps & Modern Search
+            Platforms</span></h1>
+        <p class="hero-sub" style="margin-left: auto; margin-right: auto;">We help educational institutions improve
+          their online discoverability so students can find
+          their courses, programs, and admission information more easily.</p>
+        <div class="hero-btns">
+          <a href="#pricing" class="btn btn-primary">View Packages</a>
+          <a href="#contact" class="btn btn-outline">Book Discovery Call</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><i class="fas fa-check-circle"></i> Education-Focused Search Visibility Experience
           </div>
-          <h1>Improve Your Institute's Visibility Across <span class="line-highlight">Google, Maps & Modern Search
-              Platforms</span></h1>
-          <p class="hero-sub">We help educational institutions improve their online discoverability so students can find
-            their courses, programs, and admission information more easily.</p>
-          <div class="hero-btns">
-            <a href="#pricing" class="btn btn-primary">View Packages</a>
-            <a href="#contact" class="btn btn-outline">Book Discovery Call</a>
-          </div>
-          <div class="hero-trust">
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Education-Focused Search Visibility Experience
+          <div class="trust-item"><i class="fas fa-check-circle"></i> Search Console Expertise</div>
+          <div class="trust-item"><i class="fas fa-check-circle"></i> Portfolio Available</div>
+        </div>
+      </div>
+
+      <div class="serp-demo-container reveal">
+        <div class="serp-header-labels">
+          <div class="serp-state-label" id="labelBefore">Before optimization</div>
+          <div class="serp-state-label inactive" id="labelAfter">After optimization</div>
+        </div>
+
+        <div class="serp-card white-serp">
+          <!-- Search Bar -->
+          <div class="serp-search-wrapper">
+            <div class="serp-pill-search">
+              <span class="serp-search-icon">
+                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                    fill="#9aa0a6"></path>
+                </svg>
+              </span>
+              <div class="serp-query-container">
+                <span id="serpQueryText">best 11th science classes in Thane</span><span id="serpQueryCursor"
+                  class="cursor-blink">|</span>
+              </div>
+              <span class="serp-mic-icon">
+                <svg focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+                    fill="#4285f4"></path>
+                  <path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path>
+                  <path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45.56 2.42 1.47 3.38v.32l-1.15 1.18z"
+                    fill="#f4b400"></path>
+                  <path
+                    d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+                    fill="#ea4335"></path>
+                </svg>
+              </span>
             </div>
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Search Console Expertise</div>
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Portfolio Available</div>
+          </div>
+
+          <!-- Nav Tabs -->
+          <div class="serp-tabs-google">
+            <div class="serp-tab-g active">All</div>
+            <div class="serp-tab-g">Images</div>
+            <div class="serp-tab-g">Videos</div>
+            <div class="serp-tab-g">News</div>
+            <div class="serp-tab-g">Maps</div>
+            <div class="serp-tab-g">More</div>
+          </div>
+
+          <!-- Results Area -->
+          <div class="serp-results-area" id="serpResultsArea">
+
+            <!-- AI Overview Block -->
+            <div class="serp-ai-overview" id="serpAiOverview">
+              <div class="ai-header" id="aiToggle">
+                <svg class="ai-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M19 8l-1-2.2L15.8 5l2.2-1L19 1.8l1 2.2L22.2 5l-2.2 1L19 8zm-7 13l-2.2-5L4.8 13.8l5-2.2L12 6.6l2.2 5 5 2.2-5 2.2L12 21z"
+                    fill="#a8c7fa" />
+                </svg>
+                <span>AI Overview</span>
+                <i class="fas fa-chevron-down ai-chevron"></i>
+              </div>
+              <div class="ai-content" id="aiContent">
+                <p>Based on recent web results, top coaching centers in this area offer specialized batches, experienced
+                  faculty, and strong track records. When choosing an institute, students frequently compare:</p>
+                <ul>
+                  <li>Past academic results and topper testimonials</li>
+                  <li>Fee structures and available scholarships</li>
+                  <li>Distance and travel convenience</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Before State -->
+            <div class="serp-state active" id="stateBefore">
+
+              <div class="serp-g-result">
+                <div class="serp-g-url">
+                  <span class="url-domain">competitor-academy.in</span> <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="serp-g-title">Top 11th Science Classes - Admissions Open</div>
+                <div class="serp-g-snippet">Join the best coaching institute for 11th and 12th science. Experienced
+                  faculty and great results. Enroll today.</div>
+              </div>
+
+              <div class="serp-g-result">
+                <div class="serp-g-url">
+                  <span class="url-domain">education-portal.com</span> <span class="url-path">› thane-classes</span>
+                </div>
+                <div class="serp-g-title">10 Best Science Coaching Classes in Thane (2026)</div>
+                <div class="serp-g-snippet">Compare fees, ratings, and reviews of the top science coaching classes and
+                  institutes in Thane area.</div>
+              </div>
+
+              <div class="serp-g-result">
+                <div class="serp-g-url">
+                  <span class="url-domain">generic-classes.co.in</span>
+                </div>
+                <div class="serp-g-title">Generic Classes | Science & Commerce Coaching</div>
+                <div class="serp-g-snippet">We provide coaching for all subjects. Contact us today for admission details
+                  and batch timings.</div>
+              </div>
+
+            </div>
+
+            <!-- After State -->
+            <div class="serp-state" id="stateAfter">
+
+              <!-- Client Result -->
+              <div class="serp-g-result client-g-result client-highlight" id="resultHighlight">
+                <div class="serp-g-url">
+                  <span class="url-domain">yourinstitute.in</span> <span class="url-path">› 11th-science</span>
+                </div>
+                <div class="serp-g-title">Elite Science Academy | Best 11th & 12th Classes</div>
+                <div class="serp-g-snippet">Comprehensive 11th Science coaching in Thane West. Expert faculty, updated
+                  study material, and regular mock tests. <b>Admissions open for 2026 batch.</b></div>
+                <span class="serp-badge-top">Top result</span>
+
+                <!-- Metric Badge popups -->
+                <div class="metric-popup metric-1" id="metric1"><i class="fas fa-arrow-up"></i> Search visibility
+                  improved</div>
+              </div>
+
+              <!-- Maps Pack snippet for local SEO -->
+              <div class="serp-g-maps-pack" id="mapsHighlight">
+                <div class="g-maps-header">Places <i class="fas fa-ellipsis-v"></i></div>
+                <div class="g-maps-map-image"></div>
+                <div class="g-maps-item client-map-highlight">
+                  <div class="g-maps-info">
+                    <div class="g-maps-title">Elite Science Academy (Your Institute)</div>
+                    <div class="g-maps-rating">5.0 <span class="stars">★★★★★</span> (128) · Coaching Center</div>
+                    <div class="g-maps-address">Thane West · Open until 8:00 PM</div>
+                  </div>
+                  <div class="g-maps-directions">
+                    <i class="fas fa-directions"></i>
+                    <span>Directions</span>
+                  </div>
+                </div>
+                <div class="g-maps-item">
+                  <div class="g-maps-info">
+                    <div class="g-maps-title">Competitor Academy</div>
+                    <div class="g-maps-rating">4.2 <span class="stars">★★★★☆</span> (45) · Education Center</div>
+                  </div>
+                </div>
+                <!-- Metric Badge popup -->
+                <div class="metric-popup metric-2" id="metric2"><i class="fas fa-map-marker-alt"></i> Maps profile
+                  visible</div>
+              </div>
+
+              <!-- Competitor Result pushed down -->
+              <div class="serp-g-result">
+                <div class="serp-g-url">
+                  <span class="url-domain">competitor-academy.in</span> <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="serp-g-title">Top 11th Science Classes - Admissions Open</div>
+                <div class="serp-g-snippet">Join the best coaching institute for 11th and 12th science. Experienced
+                  faculty and great results. Enroll today.</div>
+              </div>
+
+            </div>
           </div>
         </div>
-        <div class="search-sim reveal reveal-delay-1">
-          <div class="search-sim-label">What students search every day</div>
-          <div class="fake-search-bar">
-            <i class="fab fa-google"></i>
-            <div class="search-text" id="searchText">BCA Admission<span class="cursor-blink"></span></div>
-          </div>
-          <div class="result-card highlighted">
-            <div class="result-domain">yourinstitutewebsite.com <span class="result-badge">YOU</span></div>
-            <div class="result-title">BCA Admission 2026 — Direct Admission Open</div>
-            <div class="result-snippet">Enroll now for BCA program. Merit &amp; direct admissions available for 2026
-              batch.</div>
-          </div>
-          <div class="result-card competitor">
-            <div class="result-domain">competitorone.edu.in</div>
-            <div class="result-title">BCA Colleges in India — Fees, Seats &amp; Eligibility</div>
-            <div class="result-snippet">Check top BCA colleges, fees structure and admission process for 2026.</div>
-          </div>
-          <div class="result-card competitor">
-            <div class="result-domain">educationdirectory.co.in</div>
-            <div class="result-title">Best BCA Institutes 2026 — Compare &amp; Apply</div>
-            <div class="result-snippet">Compare BCA admission criteria, fees and placements across institutes.</div>
-          </div>
-          <p class="sim-note">Without visibility, students find competitors first.</p>
-        </div>
+
+        <p class="sim-note" style="margin-top: 24px; text-align: center;">This is a simplified demonstration of how
+          improved website structure, local optimization, and course page improvements can increase discoverability
+          across search platforms.</p>
       </div>
     </div>
   </section>
@@ -1451,13 +2150,38 @@
           <h2 class="section-title">Why Visibility Matters for Your Institute</h2>
           <p class="section-sub" style="margin-bottom:24px;">Every day, thousands of students in your city are searching
             for exactly what you offer.</p>
-          <ul class="search-list">
-            <li><i class="fas fa-search"></i> BCA Admission</li>
-            <li><i class="fas fa-search"></i> MBA Colleges</li>
-            <li><i class="fas fa-search"></i> Direct Admission</li>
-            <li><i class="fas fa-search"></i> Study Abroad Programs</li>
-            <li><i class="fas fa-search"></i> Certification Courses</li>
-          </ul>
+          <div class="search-lists-wrapper">
+            <div class="marquee-track">
+              <ul class="search-list marquee">
+                <li><i class="fas fa-search"></i> BCA Admission</li>
+                <li><i class="fas fa-search"></i> MBA Colleges</li>
+                <li><i class="fas fa-search"></i> Direct Admission</li>
+                <li><i class="fas fa-search"></i> Study Abroad Programs</li>
+                <li><i class="fas fa-search"></i> Certification Courses</li>
+                <!-- Duplicate for loop -->
+                <li><i class="fas fa-search"></i> BCA Admission</li>
+                <li><i class="fas fa-search"></i> MBA Colleges</li>
+                <li><i class="fas fa-search"></i> Direct Admission</li>
+                <li><i class="fas fa-search"></i> Study Abroad Programs</li>
+                <li><i class="fas fa-search"></i> Certification Courses</li>
+              </ul>
+            </div>
+            <div class="marquee-track">
+              <ul class="search-list marquee reverse">
+                <li><i class="fas fa-search"></i> NEET Coaching Thane</li>
+                <li><i class="fas fa-search"></i> JEE Mains Classes</li>
+                <li><i class="fas fa-search"></i> UPSC Coaching</li>
+                <li><i class="fas fa-search"></i> CA Foundation</li>
+                <li><i class="fas fa-search"></i> Coding Bootcamps</li>
+                <!-- Duplicate for seamless loop -->
+                <li><i class="fas fa-search"></i> NEET Coaching Thane</li>
+                <li><i class="fas fa-search"></i> JEE Mains Classes</li>
+                <li><i class="fas fa-search"></i> UPSC Coaching</li>
+                <li><i class="fas fa-search"></i> CA Foundation</li>
+                <li><i class="fas fa-search"></i> Coding Bootcamps</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div>
           <div class="why-callout reveal reveal-delay-1">
@@ -1484,82 +2208,38 @@
     </div>
   </section>
 
-  <!-- ── What We Improve ── -->
-  <section class="section section-alt" id="services">
-    <div class="container">
-      <div style="text-align:center; max-width:600px; margin:0 auto 50px;">
-        <div class="tag">Services</div>
-        <h2 class="section-title">What We Improve</h2>
-        <p style="font-size:16px; color:var(--muted);">Search visibility work for education institutions that want
-          clearer discoverability, better course page structure, and stronger local presence.</p>
-      </div>
-      <div class="improve-grid">
-        <div class="improve-card reveal">
-          <div class="improve-icon"><i class="fab fa-google"></i></div>
-          <h3>Google Search Visibility</h3>
-          <p>Course pages, admission pages, and program content improved so students can find the institute more easily
-            in search.</p>
-        </div>
-        <div class="improve-card reveal reveal-delay-1">
-          <div class="improve-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <h3>Google Maps Visibility</h3>
-          <p>Improve local discoverability for nearby students. This matters when people search for institutes in a city
-            or area.</p>
-        </div>
-        <div class="improve-card reveal reveal-delay-2">
-          <div class="improve-icon"><i class="fas fa-robot"></i></div>
-          <h3>AI Search Readiness</h3>
-          <p>Improve website structure and content quality so modern AI-powered search systems can better understand
-            your institution.</p>
-        </div>
-        <div class="improve-card reveal reveal-delay-3">
-          <div class="improve-icon"><i class="fas fa-heartbeat"></i></div>
-          <h3>Website Health</h3>
-          <p>Technical improvements that help search engines understand your website. Fix crawlability, speed, and
-            structural issues that limit visibility.</p>
-        </div>
-        <div class="improve-card reveal" style="grid-column:1 / -1;">
-          <div class="improve-icon"><i class="fas fa-book-open"></i></div>
-          <h3>Course Page Visibility</h3>
-          <p>Improve the discoverability of course, program, and admission pages that matter most to prospective
-            students.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <!-- ── Pricing ── -->
   <section class="section" id="pricing">
     <div class="container">
       <div style="text-align:center; max-width:600px; margin:0 auto 50px;">
         <div class="tag">Packages</div>
         <h2 class="section-title">Education Visibility Packages</h2>
-        <p style="font-size:16px; color:var(--muted);">Straightforward pricing designed for education institutions of
-          every size.</p>
+        <p style="font-size:16px; color:var(--text-muted);">Straightforward pricing designed for education institutions of every size.</p>
       </div>
+      
       <div class="pricing-grid">
         <!-- Starter -->
         <div class="price-card reveal">
           <div class="price-tier">Starter</div>
           <div class="price-name">Starter Visibility</div>
           <div class="price-amount">₹9,999 <span>/ Month</span></div>
-          <p style="font-size:13px; color:var(--muted); margin-bottom:18px;">For institutions beginning to improve their
-            online visibility.</p>
           <hr class="price-divider">
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px; min-height: 42px;">For institutes that want to improve their visibility across Google Search and Google Maps.</p>
           <div class="price-includes-label">Includes</div>
           <ul class="price-features">
-            <li><i class="fas fa-check"></i> Technical SEO Monitoring</li>
-            <li><i class="fas fa-check"></i> Website Visibility Improvements</li>
-            <li><i class="fas fa-check"></i> Local SEO Optimization</li>
-            <li><i class="fas fa-check"></i> Google Business Profile Optimization</li>
-            <li><i class="fas fa-check"></i> Competitor Visibility Analysis</li>
-            <li><i class="fas fa-check"></i> Search Opportunity Research</li>
-            <li><i class="fas fa-check"></i> Google Search Console Monitoring</li>
-            <li><i class="fas fa-check"></i> On-Page SEO Improvements</li>
-            <li><i class="fas fa-check"></i> Optimization of up to 3 Course or Admission Pages</li>
-            <li><i class="fas fa-check"></i> 2 SEO Content Pieces Per Month</li>
-            <li><i class="fas fa-check"></i> Monthly Progress Summary</li>
+            <li><i class="fas fa-check"></i> Website health check</li>
+            <li><i class="fas fa-check"></i> Google Search Console setup &amp; monitoring</li>
+            <li><i class="fas fa-check"></i> Google Business Profile optimization</li>
+            <li><i class="fas fa-check"></i> Local search improvements</li>
+            <li><i class="fas fa-check"></i> Competitor visibility review</li>
+            <li><i class="fas fa-check"></i> Search opportunity research</li>
+            <li><i class="fas fa-check"></i> On-page improvements</li>
+            <li><i class="fas fa-check"></i> Optimization of up to <strong>3 course or admission pages</strong></li>
+            <li><i class="fas fa-check"></i> <strong>2 SEO content articles per month</strong></li>
+            <li><i class="fas fa-check"></i> Monthly progress summary</li>
           </ul>
-          <a href="#contact" class="btn btn-outline" style="width:100%; text-align:center;">Get Started</a>
+          <a href="#contact" class="btn btn-outline" style="width:100%; text-align:center; margin-top: auto;">Get Started</a>
         </div>
 
         <!-- Growth -->
@@ -1567,178 +2247,107 @@
           <div class="price-tier">Growth</div>
           <div class="price-name">Growth Visibility</div>
           <div class="price-amount">₹16,999 <span>/ Month</span></div>
-          <p style="font-size:13px; color:var(--muted); margin-bottom:18px;">For institutions actively competing for
-            student searches and admissions.</p>
           <hr class="price-divider">
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px; min-height: 42px;">For institutes actively competing for course and admission searches.</p>
           <div class="price-includes-label">Everything In Starter Plus</div>
           <ul class="price-features">
-            <li class="inherit"><i class="fas fa-plus"></i> Advanced Competitor Analysis</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Admission Search Opportunity Research</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Website Navigation Improvements</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Competitor Competitor Visibility Gap Analysis</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Search Intent Analysis</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Optimization of up to 10 Course or Admission Pages</li>
-            <li class="inherit"><i class="fas fa-plus"></i> 4 SEO Content Pieces Per Month</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Quarterly SEO Audit</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Quarterly Strategy Review</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Detailed competitor visibility tracking</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Course &amp; admission search research</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Website structure improvements</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Internal linking improvements</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Optimization of up to <strong>10 course or admission pages</strong></li>
+            <li class="inherit"><i class="fas fa-plus"></i> <strong>4 SEO content articles per month</strong></li>
+            <li class="inherit"><i class="fas fa-plus"></i> Quarterly website health audit</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Quarterly visibility strategy review</li>
           </ul>
-          <a href="#contact" class="btn btn-primary" style="width:100%; text-align:center;">Get Started</a>
+          <a href="#contact" class="btn btn-primary" style="width:100%; text-align:center; margin-top: auto;">Get Started</a>
         </div>
 
         <!-- Enterprise -->
         <div class="price-card reveal reveal-delay-2">
           <div class="price-tier">Enterprise</div>
           <div class="price-name">Enterprise Visibility</div>
-          <div class="price-amount" style="font-size:24px; padding-top:4px;">Custom Scaling</div>
-          <p style="font-size:13px; color:var(--muted); margin-bottom:18px;">For institutions managing multiple
-            programs, locations, or admission campaigns.</p>
+          <div class="price-amount" style="font-size:24px; padding-top:4px;">Custom Pricing</div>
           <hr class="price-divider">
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px; min-height: 42px;">For institutes with multiple programs, multiple locations, or large admission campaigns.</p>
           <div class="price-includes-label">Everything In Growth Plus</div>
-          <ul class="price-features">
-            <li class="inherit"><i class="fas fa-plus"></i> Course Portfolio Expansion Planning</li>
-            <li class="inherit"><i class="fas fa-plus"></i> New Course Launch SEO</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Course-Specific Landing Pages</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Location-Based Program Pages</li>
-            <li class="inherit"><i class="fas fa-plus"></i> AI Search Readiness</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Content Cluster Development</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Program Comparison Pages</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Competitor Opportunity Analysis</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Enhanced Search Appearance Improvements</li>
-            <li class="inherit"><i class="fas fa-plus"></i> Quarterly Visibility Roadmap</li>
+          <ul class="price-features" style="margin-bottom: 20px;">
+            <li class="inherit"><i class="fas fa-plus"></i> Multi-location Google visibility</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Large course portfolio optimization</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Dedicated admission page optimization</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Content expansion strategy</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Advanced technical website improvements</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Quarterly visibility roadmap</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Priority implementation support</li>
+            <li class="inherit"><i class="fas fa-plus"></i> Custom reporting and strategy reviews</li>
           </ul>
-          <a href="#contact" class="btn btn-outline" style="width:100%; text-align:center;">Request Custom Roadmap</a>
-          <p class="price-note">Contact us for a custom visibility roadmap based on institution size, number of
-            programs, and target markets.</p>
+          <div class="price-includes-label">Best suited for</div>
+          <ul class="price-features" style="margin-bottom: 20px;">
+            <li><i class="fas fa-building"></i> Colleges</li>
+            <li><i class="fas fa-university"></i> Universities</li>
+            <li><i class="fas fa-map-marker-alt"></i> Multi-branch coaching institutes</li>
+            <li><i class="fas fa-users"></i> Large education groups</li>
+            <li><i class="fas fa-globe"></i> Study abroad companies with multiple programs</li>
+          </ul>
+          
+          <a href="#contact" class="btn btn-outline" style="width:100%; text-align:center; margin-top: auto;">Request Custom Quotation</a>
+          <p class="price-note">Pricing depends on the number of courses, locations, existing website condition, and monthly implementation requirements.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div style="text-align:center; max-width:700px; margin:0 auto 40px;">
-        <div class="tag">Process</div>
-        <h2 class="section-title">How We Work</h2>
-        <p style="font-size:16px; color:var(--muted);">A simple process that shows how visibility work moves from audit
-          to improvement to expansion.</p>
-      </div>
-      <div class="improve-grid">
-        <div class="improve-card reveal">
-          <div class="improve-icon"><i class="fas fa-1"></i></div>
-          <h3>Month 1: Review</h3>
-          <p>Website visibility audit, technical review, competitor review, and search opportunity research.</p>
-        </div>
-        <div class="improve-card reveal reveal-delay-1">
-          <div class="improve-icon"><i class="fas fa-2"></i></div>
-          <h3>Month 2: Improve</h3>
-          <p>Course page improvements, local SEO improvements, and content planning based on search demand.</p>
-        </div>
-        <div class="improve-card reveal reveal-delay-2">
-          <div class="improve-icon"><i class="fas fa-3"></i></div>
-          <h3>Month 3+: Expand</h3>
-          <p>Ongoing visibility improvements, content expansion, and progress tracking.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div style="text-align:center; max-width:700px; margin:0 auto 40px;">
-        <div class="tag">Promise Control</div>
-        <h2 class="section-title">What We Do Not Promise</h2>
-        <p style="font-size:16px; color:var(--muted);">Clear boundaries reduce confusion and protect both sides.</p>
-      </div>
-      <div class="card" style="padding:28px;">
-        <ul class="list" style="margin-top:0;">
-          <li><i class="fas fa-times" style="color:#ef4444;"></i> Guaranteed Rankings</li>
-          <li><i class="fas fa-times" style="color:#ef4444;"></i> Guaranteed Admissions</li>
-          <li><i class="fas fa-times" style="color:#ef4444;"></i> Guaranteed Revenue</li>
-          <li><i class="fas fa-times" style="color:#ef4444;"></i> Instant Results</li>
-        </ul>
-        <p style="font-size:14px; color:var(--muted); line-height:1.8; margin-top:18px;">Search visibility depends on
-          many factors including competition, website quality, content quality, and market conditions. We focus on
-          improving discoverability and long-term visibility.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-
-      <div style="text-align:center; max-width:800px; margin:0 auto 50px;">
-        <div class="tag">Proof & Experience</div>
-
-        <h2 class="section-title">
-          Real Projects, Real Visibility Work
-        </h2>
-
-        <p style="font-size:16px; color:var(--muted); line-height:1.8;">
-          Explore selected projects, SEO work, website optimizations, and search visibility improvements from my
-          portfolio.
-          Every institution is different, but the process of improving discoverability, website quality, and search
-          presence remains consistent.
-        </p>
-      </div>
-
-      <div class="improve-grid">
-
-        <div class="improve-card reveal">
-          <div class="improve-icon">
-            <i class="fas fa-chart-line"></i>
+      <div class="faq-list reveal" style="margin-top: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="faq-item" style="border: 1px solid var(--divider); border-radius: 12px; background: var(--card-bg); overflow: hidden;">
+          <button class="faq-q" data-index="pricing-0" style="padding: 24px; font-weight: 600; background: var(--card-bg);">
+            What we don’t do (Not included)
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a" id="faq-pricing-0">
+            <div class="faq-a-inner" style="padding: 0 24px 24px 24px;">
+              <p style="margin-bottom: 24px; color: var(--text-muted);">To keep our work focused and effective, the following services are not included in the visibility packages.</p>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div>
+                  <h4 style="margin-bottom: 16px; color: var(--text-primary);">Not included</h4>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Website redesign</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>New website development</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Paid advertising (Google Ads / Meta Ads)</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Social media management</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Graphic design</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Video editing or reel creation</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Daily website updates</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Unlimited page edits</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Unlimited content writing</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>New course page creation beyond the package limit</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Logo or branding design</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Offline marketing</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Lead calling or admission follow-up</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>CRM setup</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>WhatsApp marketing campaigns</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Email marketing campaigns</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Third-party software costs</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Hosting and domain renewal charges</span></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 style="margin-bottom: 16px; color: var(--text-primary);">We do not promise</h4>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Guaranteed Google rankings</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Guaranteed admissions</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Guaranteed leads or inquiries</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Guaranteed revenue growth</span></li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>Instant SEO results</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 10px;"><i class="fas fa-times" style="color:#ef4444; font-size:12px; margin-top: 4px;"></i> <span>AI search mentions or citations</span></li>
+                  </ul>
+                  <p style="font-size:14px; color:var(--text-primary); line-height:1.6; margin-top:24px; padding: 20px; background: rgba(240, 165, 0, 0.08); border-radius: 8px; border: 1px solid rgba(240, 165, 0, 0.15);">
+                    Search visibility depends on factors such as competition, website quality, content quality, location relevance, and market demand. Our focus is on improving your institute’s online discoverability and long-term visibility across Google Search, Google Maps, and modern search platforms.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <h3>Search Visibility Improvements</h3>
-
-          <p>
-            Examples of keyword research, search visibility improvements,
-            technical fixes, and content optimization work.
-          </p>
         </div>
-
-        <div class="improve-card reveal reveal-delay-1">
-          <div class="improve-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-
-          <h3>Website Optimization Projects</h3>
-
-          <p>
-            Technical audits, page improvements, website structure updates,
-            and discoverability-focused optimizations.
-          </p>
-        </div>
-
-        <div class="improve-card reveal reveal-delay-2">
-          <div class="improve-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-
-          <h3>Education Industry Experience</h3>
-
-          <p>
-            Experience working with education-focused websites,
-            course pages, admission-focused content, and student search intent.
-          </p>
-        </div>
-
       </div>
-
-      <div style="text-align:center; margin-top:50px;">
-
-        <a href="https://portfolio.examtarikh.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-
-          View Portfolio
-          <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
-
-        </a>
-
-        <p style="margin-top:18px; color:var(--muted); font-size:14px;">
-          Portfolio includes websites, SEO projects, technical work, and visibility-focused case examples.
-        </p>
-
-      </div>
-
     </div>
   </section>
 
@@ -1787,7 +2396,7 @@
             </div>
             <div class="highlight-item">
               <i class="fas fa-code"></i>
-              <span>Technical SEO Knowledge</span>
+              <span>Technical SEO Expertise</span>
             </div>
             <div class="highlight-item">
               <i class="fas fa-bullseye"></i>
@@ -1795,7 +2404,7 @@
             </div>
             <div class="highlight-item">
               <i class="fab fa-google"></i>
-              <span>Google Search Console Expertise</span>
+              <span>Google Search Console</span>
             </div>
             <div class="highlight-item">
               <i class="fas fa-chart-bar"></i>
@@ -1887,7 +2496,7 @@
           <div class="contact-detail"><i class="fas fa-phone"></i> +91 XXXXX XXXXX</div>
           <div class="contact-detail"><i class="fab fa-linkedin"></i> linkedin.com/in/deveshtatkare</div>
           <div style="margin-top:30px;">
-            <p style="font-size:14px; color:var(--muted); line-height:1.8;">
+            <p style="font-size:14px; color:var(--text-muted); line-height:1.8;">
               The discovery call is a 20–30 minute conversation to understand your current visibility,
               your target student audience, and what a realistic improvement roadmap looks like for your institute.
             </p>
@@ -1943,7 +2552,7 @@
               <span class="btn-spinner" aria-hidden="true"></span>
             </button>
 
-            <div id="formStatus" style="margin-top:14px; font-size:14px; color:var(--muted); display:none;"></div>
+            <div id="formStatus" style="margin-top:14px; font-size:14px; color:var(--text-muted); display:none;"></div>
           </form>
         </div>
       </div>
@@ -1964,13 +2573,6 @@
           </div>
         </div>
         <div class="footer-links-col">
-          <h4>Services</h4>
-          <a href="#services">Google Search Visibility</a>
-          <a href="#services">Google Maps Visibility</a>
-          <a href="#services">AI Search Readiness</a>
-          <a href="#services">Course Page Visibility</a>
-        </div>
-        <div class="footer-links-col">
           <h4>Quick Links</h4>
           <a href="#pricing">View Packages</a>
           <a href="#about">Portfolio</a>
@@ -1980,97 +2582,43 @@
         <div class="footer-links-col">
           <h4>Contact</h4>
           <a href="mailto:devesh@examtarikh.in">Email</a>
-          <a href="tel:+91XXXXXXXXXX">Phone</a>
-          <a href="#">LinkedIn</a>
+          <div class="footer-bottom">
+            Copyright &copy; 2026 Devesh Tatkare — All rights reserved.
+          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        Copyright &copy; 2026 Devesh Tatkare — All rights reserved.
-      </div>
-    </div>
   </footer>
 
   <script>
-    // ── Search Simulation Typing Effect ──
-    const queries = [
-      'BCA Admission',
-      'MBA Colleges',
-      'Direct Admission',
-      'Study Abroad Programs',
-      'Certification Courses',
-      'UPSC Coaching'
-    ];
-
-    let qi = 0;
-    let ci = 0;
-    let deleting = false;
-
-    const el = document.getElementById('searchText');
-    const cursorHTML = '<span class="cursor-blink"></span>';
-
-    function typeEffect() {
-      if (!el) return;
-
-      const current = queries[qi];
-
-      if (!deleting) {
-        ci++;
-        el.innerHTML = current.slice(0, ci) + cursorHTML;
-
-        if (ci === current.length) {
-          deleting = true;
-          setTimeout(typeEffect, 1800);
-          return;
-        }
-
-        setTimeout(typeEffect, 90);
-      } else {
-        ci--;
-        el.innerHTML = current.slice(0, ci) + cursorHTML;
-
-        if (ci === 0) {
-          deleting = false;
-          qi = (qi + 1) % queries.length;
-          setTimeout(typeEffect, 400);
-          return;
-        }
-
-        setTimeout(typeEffect, 55);
-      }
-    }
-
-    if (el) typeEffect();
-
     // ── Navbar scroll shrink ──
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
       if (navbar) {
-        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        navbar.classList.toggle("scrolled", window.scrollY > 60);
       }
     });
 
     // ── Mobile nav toggle ──
-    const hamburger = document.getElementById('hamburger');
+    const hamburger = document.getElementById("hamburger");
     if (hamburger) {
-      hamburger.addEventListener('click', () => {
-        const nav = document.getElementById('mobileNav');
-        if (nav) nav.classList.toggle('open');
+      hamburger.addEventListener("click", () => {
+        const nav = document.getElementById("mobileNav");
+        if (nav) nav.classList.toggle("open");
       });
     }
 
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        const nav = document.getElementById('mobileNav');
-        if (nav) nav.classList.remove('open');
+    document.querySelectorAll(".mobile-nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        const nav = document.getElementById("mobileNav");
+        if (nav) nav.classList.remove("open");
       });
     });
 
     // ── Scroll reveal ──
-    const revealEls = document.querySelectorAll('.reveal');
+    const revealEls = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add("visible");
           observer.unobserve(entry.target);
         }
       });
@@ -2079,84 +2627,149 @@
     revealEls.forEach(item => observer.observe(item));
 
     // ── FAQ accordion ──
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
+    document.querySelectorAll(".faq-q").forEach(btn => {
+      btn.addEventListener("click", () => {
         const idx = btn.dataset.index;
-        const ans = document.getElementById('faq-' + idx);
-        const isOpen = btn.classList.contains('open');
+        const ans = document.getElementById("faq-" + idx);
+        const isOpen = btn.classList.contains("open");
 
-        document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
-        document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll(".faq-q").forEach(b => b.classList.remove("open"));
+        document.querySelectorAll(".faq-a").forEach(a => a.classList.remove("open"));
 
         if (!isOpen && ans) {
-          btn.classList.add('open');
-          ans.classList.add('open');
+          btn.classList.add("open");
+          ans.classList.add("open");
         }
       });
     });
 
     // ── Smooth scroll for anchor links ──
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        const target = document.querySelector(anchor.getAttribute('href'));
+      anchor.addEventListener("click", e => {
+        const target = document.querySelector(anchor.getAttribute("href"));
         if (target) {
           e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       });
     });
 
+    // ── AI Overview Toggle ──
+    const aiToggle = document.getElementById("aiToggle");
+    if (aiToggle) {
+      aiToggle.addEventListener("click", () => {
+        const parent = document.getElementById("serpAiOverview");
+        if (parent) {
+          parent.classList.toggle("expanded");
+        }
+      });
+    }
+
+    // ── SERP Animation Logic ──
+    const stateBefore = document.getElementById("stateBefore");
+    const stateAfter = document.getElementById("stateAfter");
+    const labelBefore = document.getElementById("labelBefore");
+    const labelAfter = document.getElementById("labelAfter");
+    const queryText = document.getElementById("serpQueryText");
+
+    let currentPhase = 0; // 0 = before, 1 = typing, 2 = after
+    
+    function runSerpLoop() {
+      if (!stateBefore || !stateAfter) return;
+      
+      // Reset to Before state
+      currentPhase = 0;
+      stateAfter.classList.remove("active");
+      stateBefore.classList.add("active");
+      labelAfter.classList.add("inactive");
+      labelBefore.classList.remove("inactive");
+      
+      // Wait 3 seconds, then start typing new query
+      setTimeout(() => {
+        currentPhase = 1;
+        let query = "best 11th science classes in Thane";
+        let idx = query.length;
+        
+        // Delete text
+        let deleteInt = setInterval(() => {
+          idx--;
+          queryText.textContent = query.substring(0, idx);
+          if (idx <= 0) {
+            clearInterval(deleteInt);
+            
+            // Type new query
+            let newQuery = "Elite Science Academy Thane";
+            let typeIdx = 0;
+            let typeInt = setInterval(() => {
+              typeIdx++;
+              queryText.textContent = newQuery.substring(0, typeIdx);
+              if (typeIdx >= newQuery.length) {
+                clearInterval(typeInt);
+                
+                // Show After state
+                setTimeout(() => {
+                  currentPhase = 2;
+                  stateBefore.classList.remove("active");
+                  stateAfter.classList.add("active");
+                  labelBefore.classList.add("inactive");
+                  labelAfter.classList.remove("inactive");
+                }, 800);
+              }
+            }, 80);
+          }
+        }, 40);
+      }, 4000);
+    }
+    
+    if (stateBefore) {
+      runSerpLoop();
+      setInterval(runSerpLoop, 12000);
+    }
+
     // ── Formspree AJAX submit ──
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const formStatus = document.getElementById('formStatus');
+    const form = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const formStatus = document.getElementById("formStatus");
 
     if (form) {
-      form.addEventListener('submit', async (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
-
-        if (submitBtn.classList.contains('is-loading')) return;
-
+        if (submitBtn.classList.contains("is-loading")) return;
         const formData = new FormData(form);
-
-        submitBtn.classList.add('is-loading');
+        submitBtn.classList.add("is-loading");
         submitBtn.disabled = true;
-        formStatus.style.display = 'none';
-        formStatus.textContent = '';
+        formStatus.style.display = "none";
+        formStatus.textContent = "";
 
         try {
           const response = await fetch(form.action, {
-            method: 'POST',
+            method: "POST",
             body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
+            headers: { "Accept": "application/json" }
           });
-
           if (response.ok) {
             form.reset();
-
-            formStatus.textContent = 'Request sent successfully. We will get back to you within 24 hours.';
-            formStatus.style.color = '#4CAF50';
-            formStatus.style.display = 'block';
+            formStatus.textContent = "Request sent successfully. We will get back to you within 24 hours.";
+            formStatus.style.color = "#4CAF50";
+            formStatus.style.display = "block";
           } else {
             const data = await response.json().catch(() => ({}));
-            const message = data?.errors?.[0]?.message || 'Something went wrong. Please try again.';
+            const message = data?.errors?.[0]?.message || "Something went wrong. Please try again.";
             formStatus.textContent = message;
-            formStatus.style.color = '#ff6b6b';
-            formStatus.style.display = 'block';
+            formStatus.style.color = "#ff6b6b";
+            formStatus.style.display = "block";
           }
         } catch (error) {
-          formStatus.textContent = 'Network error. Please try again.';
-          formStatus.style.color = '#ff6b6b';
-          formStatus.style.display = 'block';
+          formStatus.textContent = "Network error. Please try again.";
+          formStatus.style.color = "#ff6b6b";
+          formStatus.style.display = "block";
         } finally {
-          submitBtn.classList.remove('is-loading');
+          submitBtn.classList.remove("is-loading");
           submitBtn.disabled = false;
         }
       });
     }
-  </script>
+</script>
 </body>
 
 </html>
